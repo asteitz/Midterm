@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define the usability and orientation in Linear Layout first then go into Constraint Layout to arrange this UI components -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- This is where the "constraints" or "manual" fixes to the UI occur-->
+
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/player"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:layout_marginBottom="60dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enterGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/enter"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="60dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- A LinearLayout with the style buttonRow defines the buttons in order of appearance for their respective rows (as seen on the calc) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        >
+
+        <Button
+            android:id="@+id/buttonSubtractQs"
+            style="@style/buttonSub"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_margin="1dp"
+
+            android:text="@string/sub"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            app:cornerRadius="3dp" />
+
+        <TextView
+            android:id="@+id/QsText"
+            style="@style/buttonSub"
+            android:layout_width="200dp"
+            android:layout_height="77dp"
+
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:cornerRadius="3dp" />
+
+        <Button
+            android:id="@+id/buttonAddQs"
+            style="@style/buttonPlus"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_margin="1dp"
+
+            android:text="@string/add"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            app:cornerRadius="3dp" />
+    </LinearLayout>
+        <Button
+            android:id="@+id/buttonOk"
+            style="@style/buttonOK"
+            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:layout_margin="1dp"
+
+            android:text="@string/ok"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            android:background="@drawable/button_border"
+            app:cornerRadius="3dp" />
+        </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="0dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp">
+        <!-- this will be TOP LEFT button seen in the TOP row-->
+        <!-- the radius, margin, and displayed text is hardcoded here as well (values from pdf) -->
+        <Button
+            android:id="@+id/viewHS"
+            style="@style/buttonHS"
+            android:layout_margin="2dp"
+            app:cornerRadius = "3dp"
+            android:text="@string/vhs"
+            android:backgroundTint="@color/buttons"
+            android:textSize="50sp"/>
+    </LinearLayout>
+
+
+    <!--   Closing Tags     -->
+</LinearLayout>
