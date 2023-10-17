@@ -5,16 +5,30 @@
       -->
 
     <!--  Used for the symbol buttons and has a symbol action defied for those buttons  -->
-    <style name="buttonSymbol">
+    <style name="buttonPG">
         <!--   layout_weight is used to allocated the space needed in layout   -->
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:textSize">30sp</item>
         <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/pg</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:onClick">symbolAction</item>
 
     </style>
+    <style name="buttonHS">
+        <!--   layout_weight is used to allocated the space needed in layout   -->
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/vhs</item>
+        <item name="android:textColor">@android:color/white</item>
+
+
+
+</style>
+
 
 </resources>

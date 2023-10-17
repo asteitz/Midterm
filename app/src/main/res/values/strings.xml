@@ -10,5 +10,8 @@
     <string name="back">Back</string>
     <string name="delete_confirmation">Are you sure you want to delete this note?</string>
     <string name="yes">Yes</string>
+    <string name ="welcome">Welcome to the Game!</string>
     <string name="no">No</string>
+    <string name="pg">Play Game</string>
+    <string name="vhs">View High Score</string>
 </resources>

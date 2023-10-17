@@ -1,13 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Define the usability and orientation in Linear Layout first then go into Constraint Layout to arrange this UI components -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_host_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:name="androidx.navigation.fragment.NavHostFragment"
-    app:navGraph="@navigation/nav_graph"
-    app:defaultNavHost="true"
-    tools:context=".MainActivity" />
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- This is where the "constraints" or "manual" fixes to the UI occur-->
+
+
+    <TextView
+            android:id="@+id/mainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/welcome"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="60dp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- A LinearLayout with the style buttonRow defines the buttons in order of appearance for their respective rows (as seen on the calc) -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="0dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp">
+        <!-- this will be TOP LEFT button seen in the TOP row-->
+        <!-- the radius, margin, and displayed text is hardcoded here as well (values from pdf) -->
+        <Button
+            android:id="@+id/playgame"
+            android:layout_marginTop="200dp"
+            style="@style/buttonPG"
+            android:layout_margin="2dp"
+            app:cornerRadius = "3dp"
+            android:text="@string/pg"
+            android:backgroundTint="@color/buttons"
+            android:textSize="50sp"/>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="0dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp">
+        <!-- this will be TOP LEFT button seen in the TOP row-->
+        <!-- the radius, margin, and displayed text is hardcoded here as well (values from pdf) -->
+        <Button
+            android:id="@+id/viewHS"
+            style="@style/buttonHS"
+            android:layout_margin="2dp"
+            app:cornerRadius = "3dp"
+            android:text="@string/vhs"
+            android:backgroundTint="@color/buttons"
+            android:textSize="50sp"/>
+    </LinearLayout>
+
+
+        <!--   Closing Tags     -->
+    </LinearLayout>
